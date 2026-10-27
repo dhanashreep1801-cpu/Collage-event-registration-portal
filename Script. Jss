@@ -1,0 +1,34 @@
+const form = document.getElementById("registrationForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const regno = document.getElementById("regno").value.trim();
+    const department =
+        document.getElementById("department").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const selectedEvent =
+        document.getElementById("event").value;
+
+    if (!name || !regno || !department ||
+        !email || !phone || !selectedEvent) {
+        message.textContent = "Please fill in all fields.";
+        return;
+    }
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+        message.textContent =
+            "Please enter a valid 10-digit phone number.";
+        return;
+    }
+
+    message.textContent =
+        "Thank you, " + name +
+        "! Your registration for " + selectedEvent +
+        " has been submitted successfully.";
+
+    form.reset();
+});

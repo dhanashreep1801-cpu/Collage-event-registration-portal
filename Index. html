@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+HTML
+Explain how HTML structures the application's content and insert the relevant HTML code.
+HTM
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CampusConnect Portal</h1>
+        <input type="text" id="searchBar" placeholder="Search events by name...">
+    </header>
+    
+    <main>
+        <section class="events-container">
+            <h2>Upcoming Events</h2>
+            <div id="eventGrid" class="grid"></div>
+        </section>
+
+        <section class="dashboard">
+            <h2>My Registrations</h2>
+            <ul id="myRegistrations"></ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
